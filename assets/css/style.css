@@ -1,0 +1,46 @@
+:root {
+    /* colors */
+    --black: #000;
+    --darkGray: rgb(36, 36, 36);
+    --medGray: rgb(75, 75, 75);
+    --lightGray: #D3D3D3;
+    --white: whitesmoke;
+    --glow: rgb(255, 64, 64);
+    /* font */
+    --titleFont:'Bungee', cursive;
+    --textFont: 'JetBrains Mono', monospace;
+}
+
+body {
+font-family: var(--textFont);
+}
+
+.navbar {
+    background-color: var(--darkGray);
+    display: flex;
+}
+
+.navbar-brand {
+    font-family: var(--titleFont);
+    font-size: 40px;
+}
+
+.navbar-nav {
+    position: absolute;
+    right: 0px;
+    top: 20px;
+    align-items: center;
+    vertical-align: middle;
+    
+}
+
+.nav-link {
+    border-radius: 10px;
+    color: var(--lightGray);
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+    color: var(--glow);
+}
