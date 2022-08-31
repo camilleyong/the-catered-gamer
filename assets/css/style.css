@@ -14,9 +14,8 @@
 body {
 
     font-family: var(--textFont);
-
-    font-family: var(--textFont);
-    background-image: url();
+    
+    background-image: url(/assets/images/manny-becerra-mMUo6jghVa8-unsplash.jpg);
 
 }
 
@@ -72,4 +71,15 @@ body {
 
 button {
     width: 40rem;
+}
+
+/* --SEARCH HISTORY-- */
+.search-history {
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 300px;
+    background-color: var(--darkGray);
+    color: var(--white);
 }
