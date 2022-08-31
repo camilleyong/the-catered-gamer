@@ -15,6 +15,8 @@ body {
 font-family: var(--textFont);
 }
 
+/* NAVIGATION BAR */
+
 .navbar {
     background-color: var(--darkGray);
     display: flex;
@@ -43,4 +45,25 @@ font-family: var(--textFont);
 .nav-link:hover {
     box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
     color: var(--glow);
+}
+
+/* DROP DOWN OPTIONS CARD */
+
+.find-game {
+    background-color: #CF9FFF;
+    text-align: center;
+    border: 2px solid black;
+    padding: 20px;
+    color: white;
+    font-weight: 30px;
+    
+}
+
+.btn-group{
+    flex-direction: column;
+
+}
+
+button {
+    width: 40rem;
 }
