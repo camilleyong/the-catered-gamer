@@ -12,7 +12,12 @@
 }
 
 body {
+
     font-family: var(--textFont);
+
+    font-family: var(--textFont);
+    background-image: url();
+
 }
 
 .navbar {
@@ -38,9 +43,10 @@ body {
     border-radius: 10px;
     color: var(--lightGray);
     transition: all 0.2s ease-in-out;
+    margin-right: 15px;
 }
 
 .nav-link:hover {
-    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+    box-shadow: 0 5px 15px var(--glow);
     color: var(--glow);
 }
