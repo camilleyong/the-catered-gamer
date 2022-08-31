@@ -701,14 +701,8 @@ function getYouTube() {
         });
 
 
-
-
-
-
-
 }
 
-// CLICK PHOTO 
 
 
 
@@ -716,3 +710,4 @@ function getYouTube() {
 
 
 getYouTube();
+
