@@ -7,13 +7,17 @@
     --white: whitesmoke;
     --glow: rgb(255, 64, 64);
     /* font */
-    --titleFont:'Bungee', cursive;
+    --titleFont: 'Bungee', cursive;
     --textFont: 'JetBrains Mono', monospace;
 }
 
 body {
-font-family: var(--textFont);
-background-image: url();
+
+    font-family: var(--textFont);
+
+    font-family: var(--textFont);
+    background-image: url();
+
 }
 
 /* NAVIGATION BAR */
@@ -34,7 +38,7 @@ background-image: url();
     top: 20px;
     align-items: center;
     vertical-align: middle;
-    
+
 }
 
 .nav-link {
