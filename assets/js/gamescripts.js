@@ -1,26 +1,25 @@
-console.log("hey it's linked!");
-
-
-
-
-
-
 var submitBtn = $('#submit-btn');
 
-//*two dropdowns, pull info from both and link to a submit button --> addeventlistener.submit
 
 submitBtn.on('click', function () {
     var platform = $("#platform").attr('data-value');
     var genre = $("#genre").attr('data-value');
+    
+    var selected = []
 
-    fetch
+    if(platform.val === null || genre === null) {
+        alert('Please select a platform, gamer.')
+        return;
+    }
 
-//*value of 1st drop menu, 2nd menu
-}
+    $.each(platform, genre, function(){
+        selected.push($(this).val());
+    })
+})
 
     
     
-//  }
+//  
 //  function handleSearchFormSubmit(event) {
 //     event.preventDefault();
 //    if(event.target.matches("img")){
@@ -69,14 +68,11 @@ function getYouTube(game) {
     var youTubeVideo = $("#youTubeVideo");
     var trailerUrl = "https://cors-anywhere.herokuapp.com/https://serpapi.com/search.json?engine=youtube&search_query=" + game + "&api_key=58f4d32ec9b9734f0935989c9def9f0766c97c4092a3e8b56d00745a828c4eb1";
 
-
-
     fetch(trailerUrl)
         .then(function (response) {
             if (response.ok) {
                 return response.json();
             }
-
         })
         .then(function (data) {
             console.log(data.video_results);
@@ -85,10 +81,6 @@ function getYouTube(game) {
             console.log(url);
             $(youTubeVideo).attr("src", url)
         });
-
-
-
-
 }
 
 getYouTube("skyrim+live+action+trailer");
