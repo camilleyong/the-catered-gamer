@@ -73,12 +73,12 @@ button {
 
 
 /* --SEARCH HISTORY-- */
-/* .search-history {
-    max-width: 1000px;
+.search-history {
+    /* max-width: 1000px; */
     display: flex;
     justify-content: center;
-    margin: auto;
-    margin-top: 300px;
+    /* margin: auto;
+    margin-top: 300px; */
     background-color: var(--darkGray);
     color: var(--white);
-} */
+}
