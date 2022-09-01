@@ -51,14 +51,15 @@ background-image: url("./assets/images/manny-becerra-mMUo6jghVa8-unsplash.jpg");
 
 /* DROP DOWN OPTIONS CARD */
 .find-game {
-    background-color: #CF9FFF;
+    background-color: var(--medGray);
     color: white;
     text-align: center;
-    width: 50rem;
+    max-width: 1000px;
     padding: 30px;
     right: 6rem;
     top: 17rem;
     position: relative;
+    margin: auto;
 
 }
 
