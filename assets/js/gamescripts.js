@@ -1,26 +1,24 @@
-console.log("hey it's linked!");
-
-
-
-
-
-
 var submitBtn = $('#submit-btn');
-
-//*two dropdowns, pull info from both and link to a submit button --> addeventlistener.submit
 
 submitBtn.on('click', function () {
     var platform = $("#platform").attr('data-value');
     var genre = $("#genre").attr('data-value');
+    
+    var selected = []
 
-    fetch
+    if(platform.val === null || genre === null) {
+        alert('Please select a platform, gamer.')
+        return;
+    }
 
-//*value of 1st drop menu, 2nd menu
-}
+    $.each(platform, genre, function(){
+        selected.push($(this).val());
+    })
+})
 
     
     
-//  }
+//  
 //  function handleSearchFormSubmit(event) {
 //     event.preventDefault();
 //    if(event.target.matches("img")){
