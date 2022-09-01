@@ -7,13 +7,20 @@
     --white: whitesmoke;
     --glow: rgb(255, 64, 64);
     /* font */
-    --titleFont:'Bungee', cursive;
+    --titleFont: 'Bungee', cursive;
     --textFont: 'JetBrains Mono', monospace;
 }
 
 body {
+
 font-family: var(--textFont);
 background-image: url();
+
+
+    font-family: var(--textFont);
+    
+    background-image: url(/assets/images/manny-becerra-mMUo6jghVa8-unsplash.jpg);
+
 
 }
 
@@ -35,7 +42,7 @@ background-image: url();
     top: 20px;
     align-items: center;
     vertical-align: middle;
-    
+
 }
 
 .nav-link {
@@ -72,5 +79,19 @@ background-image: url();
 
 button {
     width: 40rem;
+
     margin: 10px;
+
+}
+
+/* --SEARCH HISTORY-- */
+.search-history {
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 300px;
+    background-color: var(--darkGray);
+    color: var(--white);
+
 }
