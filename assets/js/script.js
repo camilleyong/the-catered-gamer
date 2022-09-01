@@ -69,9 +69,26 @@ function getYouTube() {
             console.log(url);
             $(youTubeVideo2).attr("src", url)
         });
-
-
-
 }
 
-getYouTube();
+
+// TODO:  Build function to get Gamespot API DATA (filtered data should include NAME, DESCRIPTION, and GENRE to start; can add more later)
+// TODO:  add appropriate reference in html
+
+/**
+ * *PSEUDO-CODING THE FUNCTION:
+ *          * computer, remember this function called 'getGamespot'
+ *          * - and when you run it, tell it to reference the games library at gamespot:
+ *          *      (URL: http://www.gamespot.com/api/games/?api_key=[YOUR API KEY])
+ *          * - filters should limit data to be displayed on user's RESULTS page (i.e. NAME, DESCRIPTION, GENRE)
+ *      ? NOTE - user's requests to be put into LOCAL STORAGE and then CALLED to the RESULTS page from Local Storage
+ *      ?                -user request gets filtered through the function
+ */
+
+
+// function getGamespot() {
+//     event.preventDefault();
+    
+//     var gameDataUrl = "http://www.gamespot.com/api/games/?api_key=fd08d89fa51dd0b8a4fd97f597f242c5973cee51";
+    
+//     }
