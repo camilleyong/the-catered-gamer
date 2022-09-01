@@ -12,8 +12,8 @@
 }
 
 body {
-font-family: var(--textFont);
-background-image: url("./assets/images/manny-becerra-mMUo6jghVa8-unsplash.jpg");
+    font-family: var(--textFont);
+    background-image: url(/assets/images/manny-becerra-mMUo6jghVa8-unsplash.jpg);
 }
 
 /* NAVIGATION BAR */
@@ -58,10 +58,8 @@ background-image: url("./assets/images/manny-becerra-mMUo6jghVa8-unsplash.jpg");
     font-weight: 30px;
     max-width: 1000px;
     padding: 30px;
-    right: 6rem;
-    top: 17rem;
-    position: relative;
     margin: auto;
+    margin-top: 200px;
     flex-direction: column;
     text-align: center;
 }
@@ -73,12 +71,12 @@ background-image: url("./assets/images/manny-becerra-mMUo6jghVa8-unsplash.jpg");
 }
 
 /* --SEARCH HISTORY-- */
-/* .search-history {
+.search-history {
+    background-color: var(--darkGray);
     max-width: 1000px;
     display: flex;
     justify-content: center;
     margin: auto;
     margin-top: 300px;
-    background-color: var(--darkGray);
     color: var(--white);
-} */
+}
