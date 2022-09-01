@@ -12,7 +12,6 @@
 }
 
 body {
-
 font-family: var(--textFont);
 background-image: url("./assets/images/manny-becerra-mMUo6jghVa8-unsplash.jpg");
 }
@@ -51,34 +50,30 @@ background-image: url("./assets/images/manny-becerra-mMUo6jghVa8-unsplash.jpg");
 }
 
 /* DROP DOWN OPTIONS CARD */
-
 .find-game {
     background-color: #CF9FFF;
-    text-align: center;
-    border: 2px solid black;
-    padding: 20px;
     color: white;
+    text-align: center;
     width: 50rem;
-    position:relative;
-    left: 22rem;
-    margin-top: 30px;
-
-}
-
-.btn-group{
-    flex-direction: column;
+    padding: 30px;
+    right: 6rem;
+    top: 17rem;
+    position: relative;
 
 }
 
 button {
-    width: 40rem;
-    margin-bottom: 20px;
-    margin: 10px;
+    width: 30rem;
+    margin-bottom: 10px;
+
 
 }
 
+
+
+
 /* --SEARCH HISTORY-- */
-.search-history {
+/* .search-history {
     max-width: 1000px;
     display: flex;
     justify-content: center;
@@ -86,4 +81,4 @@ button {
     margin-top: 300px;
     background-color: var(--darkGray);
     color: var(--white);
-}
+} */
