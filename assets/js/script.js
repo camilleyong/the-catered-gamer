@@ -85,7 +85,6 @@ function getYouTube() {
             console.log(url);
             $(youTubeVideo2).attr("src", url)
         });
-}
 
     var trailerUrl3 = "https://cors-anywhere.herokuapp.com/https://serpapi.com/search.json?engine=youtube&search_query=elden+ring+trailer&api_key=58f4d32ec9b9734f0935989c9def9f0766c97c4092a3e8b56d00745a828c4eb1";
 
@@ -696,21 +695,21 @@ function getYouTube() {
             console.log(url);
             $(youTubeVideo29).attr("src", url)
         });
-}
+    }
+    
 getYouTube();
 
 
- 
 
 
-var gamespotApi = "http://www.gamespot.com/api/games/?api_key=fd08d89fa51dd0b8a4fd97f597f242c5973cee51";
+// var gamespotApi = "http://www.gamespot.com/api/games/?api_key=fd08d89fa51dd0b8a4fd97f597f242c5973cee51";
 
-$("iframe").click(function()
+// $("iframe").click(function()
 
- function getGamespot (event){
-    event.preventDefault();
+//  function getGamespot (event){
+//     event.preventDefault();
     
- }
+//  }
 //  function handleSearchFormSubmit(event) {
 //     event.preventDefault();
 //    if(event.target.matches("img")){
