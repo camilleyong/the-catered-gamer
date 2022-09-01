@@ -7,13 +7,19 @@
     --white: whitesmoke;
     --glow: rgb(255, 64, 64);
     /* font */
-    --titleFont:'Bungee', cursive;
+    --titleFont: 'Bungee', cursive;
     --textFont: 'JetBrains Mono', monospace;
 }
 
 body {
-font-family: var(--textFont);
+
+    font-family: var(--textFont);
+    
+    background-image: url(/assets/images/manny-becerra-mMUo6jghVa8-unsplash.jpg);
+
 }
+
+/* NAVIGATION BAR */
 
 .navbar {
     background-color: var(--darkGray);
@@ -31,16 +37,49 @@ font-family: var(--textFont);
     top: 20px;
     align-items: center;
     vertical-align: middle;
-    
+
 }
 
 .nav-link {
     border-radius: 10px;
     color: var(--lightGray);
     transition: all 0.2s ease-in-out;
+    margin-right: 15px;
 }
 
 .nav-link:hover {
-    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+    box-shadow: 0 5px 15px var(--glow);
     color: var(--glow);
+}
+
+/* DROP DOWN OPTIONS CARD */
+
+.find-game {
+    background-color: #CF9FFF;
+    text-align: center;
+    border: 2px solid black;
+    padding: 20px;
+    color: white;
+    font-weight: 30px;
+    
+}
+
+.btn-group{
+    flex-direction: column;
+
+}
+
+button {
+    width: 40rem;
+}
+
+/* --SEARCH HISTORY-- */
+.search-history {
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 300px;
+    background-color: var(--darkGray);
+    color: var(--white);
 }
