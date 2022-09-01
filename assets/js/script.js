@@ -723,16 +723,6 @@ function getYouTube() {
             $(youTubeVideo29).attr("src", url)
         });
 
-
-}
-
-
-
-
-
-
-
-
 getYouTube();
 
 
