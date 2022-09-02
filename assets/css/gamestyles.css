@@ -35,3 +35,10 @@ body {
     color: var(--glow);
     border-radius: 10px;    
 }
+
+/* GAME INFO DISPLAY */
+
+.game-display {
+    background-color: var(--darkGray);
+    color: var(--white);
+}
