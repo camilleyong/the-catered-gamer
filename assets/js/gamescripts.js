@@ -5,8 +5,6 @@ var genreBtn = $('#genreBtn');
 var submitBtn = $('#submit-btn');
 
 
-
-
 function getGameData () {
     var gameUrl = "https://api.rawg.io/api/games?key=fec3f6fd194f4e91bd4b7a9873506189"
     
