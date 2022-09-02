@@ -65,7 +65,7 @@ body {
     margin: auto;
     margin-top: 200px;
     flex-direction: column;
-    text-align: center;    
+    text-align: center;
     height: auto;
 }
 
@@ -81,7 +81,7 @@ body {
     flex-direction: column;
     text-align: center;*/
     padding: 30px;
-} 
+}
 
 .btn-secondary {
     width: 30rem;
@@ -100,7 +100,7 @@ body {
     align-items: middle;
     display: flex;
     justify-content: center;
-    margin: auto;    
+    margin: auto;
 }
 
 .game-btn {
