@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="Description" content="Enter your description here" />
+    <!-- <meta name="Description" content="Enter your description here" /> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
 
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
@@ -13,12 +13,12 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Bungee&family=Comfortaa:wght@300&family=JetBrains+Mono:wght@200&family=Playfair+Display:wght@500&family=Unica+One&display=swap"
         rel="stylesheet">
-
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>The Catered Gamer</title>
 </head>
 
-<body>   
+<body> 
+   
 
 <header>
     <nav>
@@ -40,184 +40,104 @@
 
     <section class="card-container">
 
-        <div class="find-game" hidden>
+        <div class="find-game">
             <h1>Find Your Next Game:</h1>
+            
             <div class="container-1">
                 <div class="btn-group1">
-                    <div class="first-btn">
-                        <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Genre:
-                        </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-
+                    <div class="first-btn dropdown">
+                        <button id="platformBtn" class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Platforms:</button>
+                        <div class="dropdown dropdown-menu" id="platform-drop">
+                            <li class="dropdown-item" data-value="playstation-5">Playstation 5</li>
+                            <li class="dropdown-item" data-value="playstation-4">Playstation 4</li>
+                            <li class="dropdown-item" data-value="xbox-series">XBOX Series X/S</li>
+                            <li class="dropdown-item" data-value="xbox-one">XBOX One</li>
+                            <li class="dropdown-item" data-value="nintendo-switch">Nintendo Switch</li>
+                            <li class="dropdown-item" data-value="pc">PC</li>
+                            <li class="dropdown-item" data-value="ios">IOS</li>
+                            <li class="dropdown-item" data-value="android">Android</li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
             <div class="container-2">
                 <div class="btn-group2">
                     <div class="second-btn">
-                        <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-
-                        </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
+                        <button id="genreBtn" class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Genre:</button>
+                            <div class="dropdown-menu" id="genre-drop">
+                                <li class="dropdown-item" data-value="simulation">Simulation</li>
+                                <li class="dropdown-item" data-value="shooter">Shooter</li>
+                                <li class="dropdown-item" data-value="action">Action</li>
+                                <li class="dropdown-item" data-value="adventure">Adventure</li>
+                                <li class="dropdown-item" data-value="arcade">Arcade</li>
+                                <li class="dropdown-item" data-value="puzzle">Puzzle</li>
+                                <li class="dropdown-item" data-value="indie">Indie</li>
+                                <li class="dropdown-item" data-value="rpg">RPG</li>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="search-results">
-            <div class="game-btn card">
-                <div class="row">
-                    <!-- button to hold icon, push icon html as innertext based on genre, if loop? -->
-                    <button class="game-icon">icon</button>
-                    <div class="info-container">
-                    <h3 class="game-title">Game Title</h3>
-                    <p class="description">Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, exercitationem.</p>
-                    <p class="game-platforms">icon</p>
-                    <p class="release-date">00/00/0000</p>
-                    </div>
-                </div>
-            </div>
-            <div class="game-btn card">
-                <div class="row">
-                    <!-- button to hold icon, push icon html as innertext based on genre, if loop? -->
-                    <button class="game-icon">icon</button>
-                    <div class="info-container">
-                    <h3 class="game-title">Game Title</h3>
-                    <p class="description">Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, exercitationem.</p>
-                    <p class="game-platforms">icon</p>
-                    <p class="release-date">00/00/0000</p>
-                    </div>
-                </div>
-            </div>
-            <div class="game-btn card">
-                <div class="row">
-                    <!-- button to hold icon, push icon html as innertext based on genre, if loop? -->
-                    <button class="game-icon">icon</button>
-                    <div class="info-container">
-                    <h3 class="game-title">Game Title</h3>
-                    <p class="description">Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, exercitationem.</p>
-                    <p class="game-platforms">icon</p>
-                    <p class="release-date">00/00/0000</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
+                        <button type="button" class="btn btn-secondary btn-lg" id="submit-btn">Submit</button>
+    </div>
+</section>
 
 
     <section class="search-history card">
-    <h2 class="p-2">TAKE ANOTHER LOOK...</h2>
-    <ul class="search-history">
+        <h2 class="p-2">TAKE ANOTHER LOOK...</h2>
+            <ul class="search-history">
+        </ul>
+</section>
 
-    </ul>
+        <div class="search-results" hidden>
+            <div class="game-btn card">
+                <div class="row">
+                    <!-- button to hold icon, push icon html as innertext based on genre, if loop? -->
+                    <button class="game-icon">icon</button>
+                    <div class="info-container">
+                    <h3 class="game-title">Game Title</h3>
+                    <p class="description">Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, exercitationem.</p>
+                    <p class="game-platforms">icon</p>
+                    <p class="release-date">00/00/0000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="game-btn card">
+                <div class="row">
+                    <!-- button to hold icon, push icon html as innertext based on genre, if loop? -->
+                    <button class="game-icon">icon</button>
+                    <div class="info-container">
+                    <h3 class="game-title">Game Title</h3>
+                    <p class="description">Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, exercitationem.</p>
+                    <p class="game-platforms">icon</p>
+                    <p class="release-date">00/00/0000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="game-btn card">
+                <div class="row">
+                    <!-- button to hold icon, push icon html as innertext based on genre, if loop? -->
+                    <button class="game-icon">icon</button>
+                    <div class="info-container">
+                    <h3 class="game-title">Game Title</h3>
+                    <p class="description">Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, exercitationem.</p>
+                    <p class="game-platforms">icon</p>
+                    <p class="release-date">00/00/0000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </section>
-
-
-   <!-- <section>
-        <iframe src="" id="youTubeVideo" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        <iframe src="" id="youTubeVideo1" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        <iframe src="" id="youTubeVideo2" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        <iframe src="" id="youTubeVideo3" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        <iframe src="" id="youTubeVideo4" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        <iframe src="" id="youTubeVideo5" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        <iframe src="" id="youTubeVideo6" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        <iframe src="" id="youTubeVideo7" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        <iframe src="" id="youTubeVideo8" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        <iframe src="" id="youTubeVideo9" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        <iframe src="" id="youTubeVideo10" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        <iframe src="" id="youTubeVideo11" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        <iframe src="" id="youTubeVideo12" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        <iframe src="" id="youTubeVideo13" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        <iframe src="" id="youTubeVideo14" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        <iframe src="" id="youTubeVideo15" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        <iframe src="" id="youTubeVideo16" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        <iframe src="" id="youTubeVideo17" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        <iframe src="" id="youTubeVideo18" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        <iframe src="" id="youTubeVideo19" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        <iframe src="" id="youTubeVideo20" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        <iframe src="" id="youTubeVideo21" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        <iframe src="" id="youTubeVideo22" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        <iframe src="" id="youTubeVideo23" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        <iframe src="" id="youTubeVideo24" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        <iframe src="" id="youTubeVideo25" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        <iframe src="" id="youTubeVideo26" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        <iframe src="" id="youTubeVideo27" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        <iframe src="" id="youTubeVideo28" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        <iframe src="" id="youTubeVideo29" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-
-    </section> -->
 </body>
 
 <footer>
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
-        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-    <script src="./assets/js/gamescripts.js"> </script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script src="./assets/js/gamescripts.js"> </script>
+
 </footer>
 </html>
