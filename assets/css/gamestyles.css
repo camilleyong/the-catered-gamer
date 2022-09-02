@@ -37,8 +37,19 @@ body {
 }
 
 /* GAME INFO DISPLAY */
+.gameinfo-container {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
 
 .game-display {
     background-color: var(--darkGray);
     color: var(--white);
+}
+
+.card-title {
+    font-size: 40px;
 }
