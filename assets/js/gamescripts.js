@@ -6,33 +6,61 @@ var submitBtn = $('#submit-btn');
 
 
 
-
-function getGameData () {
-    var gameUrl = "https://api.rawg.io/api/games?key=fec3f6fd194f4e91bd4b7a9873506189"
+// submitBtn.on('click', function () {
+//     var platform = $("#platformBtn").attr('data-value');
+//     var genre = $("#genreBtn").attr('data-value');
+        
     
-    fetch(gameUrl)
-    console.log("hi")
-        .then(function(response) {
-            if(response.ok) {
-                return response.json();
-            }
-        })
-        .then(function (data) {
-        console.log(data)  
-        })
-}
+    // if(platform.val === null || genre === null) {
+    //     alert('Please select a platform and genre, gamer.')
+    //     return;    
+    // }
+// })
 
-
-
-
-
-// platformBtn.on('click', '.dropdown-item', function() {
-//     localStorage.setItem('.dropdown-item')
-// });
 
 // genreBtn.on('click', '.dropdown-item', function() {
-//     localStorage.setItem('dropdown-item'.val)
-//     })
+//     localStorage.setItem('.dropdown-item'.val)
+// })
+
+function getPlatforms() {
+    var platformsUrl = "https://api.rawg.io/api/platforms?key=fec3f6fd194f4e91bd4b7a9873506189"
+
+    fetch(platformsUrl)
+    .then(function(response) {
+        if(response.ok) {
+            return response.json();
+        }
+        })
+        .then(function (data) {
+            console.log(data)
+        })
+};
+
+
+
+function getGenres () {
+    var genresUrl = "https://api.rawg.io/api/genres?key=fec3f6fd194f4e91bd4b7a9873506189"
+    
+    fetch(genresUrl)
+    
+    .then(function(response) {
+        if(response.ok) {
+            return response.json();
+        }
+    })
+    .then(function (data) {
+        console.log(data)  
+    })
+};
+
+
+
+
+
+
+
+
+
 
 
 // submitBtn.addEventListener("click", function(event) {
@@ -40,24 +68,6 @@ function getGameData () {
 
 //     var platform = document.querySelector("#platformBtn").value;
 //     var genre = document.querySelector("#genreBtn").value;
-
-    
-
-// })
-
-// submitBtn.on('click', function () {
-//     var platform = $("#platformBtn").attr('data-value');
-//     var genre = $("#genreBtn").attr('data-value');
-    
-
-//     if(platform.val === null || genre === null) {
-//         alert('Please select a platform and genre, gamer.')
-//         return;    
-//     }
-//     })
-
-
-
     
     
 //  
