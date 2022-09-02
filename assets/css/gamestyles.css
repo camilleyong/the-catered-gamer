@@ -53,3 +53,29 @@ body {
 .card-title {
     font-size: 40px;
 }
+
+.video-container {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    max-width: 1000px;
+}
+
+.game-video {
+    background-color: var(--darkGray);
+    color: var(--white);
+}
+
+.video-input {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+.gameplay-title {
+    margin: 10px;
+}
