@@ -55,7 +55,6 @@ body {
     color: white;
     text-align: center;
     width: 50rem;
-    font-weight: 30px;
     max-width: 1000px;
     padding: 30px;
     margin: auto;
@@ -67,6 +66,13 @@ body {
 .btn-secondary {
     width: 30rem;
     margin: 15px;
+
+}
+
+.submit-btn {
+    width: 30rem;
+    margin: 15px;
+   
 
 }
 

@@ -45,41 +45,45 @@
             <div class="container-1">
                 <div class="btn-group1">
                     <div class="first-btn">
-                        <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Genre:
-                        </button>
-                            <ul class="dropdown-menu">
-                                <li class="dropdown-item">Sandbox</li>
-                                <li class="dropdown-item">Real-time Strategy</li>
-                                <li class="dropdown-item">First Person Shooter</li>
-                                <li class="dropdown-item">Third Person Shooter</li>
-                                <li class="dropdown-item">Multiplayer</li>
-                                <li class="dropdown-item">Role-Playing Games</li>
-                                <li class="dropdown-item">Simulation</li>
-                                <li class="dropdown-item">Puzzles and Party Games</li>
-                                <li class="dropdown-item">Sports</li>
-                                <li class="dropdown-item">Action / Adventure</li>
-                                <li class="dropdown-item">Survival Horror</li>
-                            </ul>
+                            <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Platforms:
+                            </button>
+                            <div class="dropdown-menu" id="platform-drop">
+                                <li class="dropdown-item" data-value="playstation-5">Playstation 5</li>
+                                <li class="dropdown-item" data-value="playstation-4">Playstation 4</li>
+                                <li class="dropdown-item" data-value="xbox-series">XBOX Series X/S</li>
+                                <li class="dropdown-item" data-value="xbox-one">XBOX One</li>
+                                <li class="dropdown-item" data-value="nintendo-switch">Nintendo Switch</li>
+                                <li class="dropdown-item" data-value="pc">PC</li>
+                                <li class="dropdown-item" data-value="ios">IOS</li>
+                                <li class="dropdown-item" data-value="android">Android</li>
+                                </div>
+                          </div>
                     </div>
                 </div>
-            </div>
             <div class="container-2">
                 <div class="btn-group2">
                     <div class="second-btn">
-                        <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Theme:
-                        </button>
-                            <ul class="dropdown-menu">
-                                <li class="dropdown-item">Action</li>
-                                <li class="dropdown-item">Another action</li>
-                                <li class="dropdown-item">Something else here</li>
-                            </ul>
+                        <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Genre:
+                          </button>
+                          <div class="dropdown-menu" id="genre-drop">
+                              <li class="dropdown-item" data-value="simulation">Simulation</li>
+                              <li class="dropdown-item" data-value="shooter">Shooter</li>
+                              <li class="dropdown-item" data-value="rpg">RPG</li>
+                              <li class="dropdown-item" data-value="strategy">Strategy</li>
+                              <li class="dropdown-item" data-value="indie">Indie</li>
+                              <li class="dropdown-item" data-value="adventure">Adventure</li>
+                              <li class="dropdown-item" data-value="action">Action</li>
+                              <li class="dropdown-item" data-value="arcade">Arcade</li>
+                              <li class="dropdown-item" data-value="puzzle">Puzzle</li>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+                        <button type="button" class="btn btn-secondary btn-lg" id="submit-btn">Submit</button>
+    </div>
+</section>
 
 
 
@@ -189,6 +193,7 @@
 <footer>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script src="./assets/js/script.js"> </script>
 </footer>
 </html>
