@@ -6,7 +6,7 @@ var submitBtn = $("#submit-btn");
 
 submitBtn.on("click", function(event) {
     event.preventDefault();
-    var platform = ("#platform")
+    var platform = $("#platform")
     var genre = $("#genre")
     var image = $("#image")
     var game = $("#game")
@@ -14,8 +14,8 @@ submitBtn.on("click", function(event) {
     var platformUrl = "https://api.rawg.io/api/platforms?key=0da6d52b21ec4d8fac88f4f4ceafe806"
 
 
-    var platform = document.querySelector("#platform-drop").value;
-    var genre = document.querySelector("#genre-drop").value;
+    // var platform = document.querySelector("#platform-drop").value;
+    // var genre = document.querySelector("#genre-drop").value;
 
     var gameUrl = "https://api.rawg.io/api/games?genre="+genre+"&platform="+platform+"&key=0da6d52b21ec4d8fac88f4f4ceafe806"
     
