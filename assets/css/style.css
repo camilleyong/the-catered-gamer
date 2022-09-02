@@ -70,30 +70,18 @@ body {
 }
 
 /* DROP DOWN OPTIONS CARD */
-.find-game {
-    /* background-color: var(--medGray);
-    color: white;
-    font-weight: 30px;
-    max-width: 1000px;
-    
-    margin: auto;
-    margin-top: 200px;
-    flex-direction: column;
-    text-align: center;*/
-    padding: 30px;
-} 
-
-.btn-secondary {
+select {
     width: 30rem;
-    margin: 15px;
-
+    margin-top: 2px;
 }
 
 
-.submit-btn {
+#submit-btn {
     width: 30rem;
-    margin: 15px;
+    margin: 5px;
+    background-color: #CF9FFF;
 }
+
 
 /* --SEARCH RESULTS-- */
 .search-results {
