@@ -1,91 +1,39 @@
+var submitBtn = $('#submit-btn');
 
 
-console.log("hey it's linked!");
+submitBtn.on('click', function () {
+    var platform = $("#platform").attr('data-value');
+    var genre = $("#genre").attr('data-value');
+    
+    var selected = []
 
+    if(platform.val === null || genre === null) {
+        alert('Please select a platform, gamer.')
+        return;
+    }
 
-var youTubeVideo = $("#youTubeVideo");
+    $.each(platform, genre, function(){
+        selected.push($(this).val());
+    })
+})
 
-
-
-function getYouTube(game) {
-
-    var trailerUrl = "https://cors-anywhere.herokuapp.com/https://serpapi.com/search.json?engine=youtube&search_query=" + game + "&api_key=58f4d32ec9b9734f0935989c9def9f0766c97c4092a3e8b56d00745a828c4eb1";
-
-
-
-    fetch(trailerUrl)
-        .then(function (response) {
-            if (response.ok) {
-                return response.json();
-            }
-
-        })
-        .then(function (data) {
-            console.log(data.video_results);
-            var url = data.video_results[0].link
-            url = url.replace("watch?v=", "embed/")
-            console.log(url);
-            $(youTubeVideo).attr("src", url)
-        });
-
-
-
-
-}
-
-getYouTube("skyrim+live+action+trailer");
-
-
-
-
-
-
-
-
-
-// var gamespotApi = "http://www.gamespot.com/api/games/?api_key=fd08d89fa51dd0b8a4fd97f597f242c5973cee51";
-
-// $("iframe").click(function()
-
-//  function getGamespot (event){
+    
+    
+//  
+//  function handleSearchFormSubmit(event) {
 //     event.preventDefault();
-    
-// //  }
-// //  function handleSearchFormSubmit(event) {
-// //     event.preventDefault();
-// //    if(event.target.matches("img")){
-// //          var game = event.target.getAttribute("data-game");
-// //          var queryString = './game.html';
-// //           localStorage.setItem("game",game)
-// //          location.assign(queryString);
-// //    }
-   
-  
-    
+//    if(event.target.matches("img")){
+//          var game = event.target.getAttribute("data-game");
+//          var queryString = './game.html';
+//           localStorage.setItem("game",game)
+//          location.assign(queryString);
+//    }
+
+
+
 // //   }
-  
+
 // //   images.addEventListener('click', handleSearchFormSubmit);
-
-
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // // TODO:  Build function to get Gamespot API DATA (filtered data should include NAME, DESCRIPTION, and GENRE to start; can add more later)
 // // TODO:  add appropriate reference in html
@@ -103,3 +51,36 @@ getYouTube("skyrim+live+action+trailer");
 //  */
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+function getYouTube(game) {
+    var youTubeVideo = $("#youTubeVideo");
+    var trailerUrl = "https://cors-anywhere.herokuapp.com/https://serpapi.com/search.json?engine=youtube&search_query=" + game + "&api_key=58f4d32ec9b9734f0935989c9def9f0766c97c4092a3e8b56d00745a828c4eb1";
+
+    fetch(trailerUrl)
+        .then(function (response) {
+            if (response.ok) {
+                return response.json();
+            }
+        })
+        .then(function (data) {
+            console.log(data.video_results);
+            var url = data.video_results[0].link
+            url = url.replace("watch?v=", "embed/")
+            console.log(url);
+            $(youTubeVideo).attr("src", url)
+        });
+}
+
+getYouTube("skyrim+live+action+trailer");
