@@ -12,11 +12,8 @@
 }
 
 body {
-
     font-family: var(--textFont);
-
-    font-family: var(--textFont);
-    background-image: url("/assets/images/manny-becerra-mMUo6jghVa8-unsplash.jpg");
+    background-image: url("../images/manny-becerra-mMUo6jghVa8-unsplash.jpg");
 
 }
 
