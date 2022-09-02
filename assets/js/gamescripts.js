@@ -23,18 +23,18 @@ submitBtn.on('click', '.dropdown-item', function () {
     })
 })
 
-function getGameData () {
+function getGameData() {
     var gameUrl = "https://api.rawg.io/api/games?key=fec3f6fd194f4e91bd4b7a9873506189"
-    
+
     fetch(gameUrl)
     console.log("hi")
-        .then(function(response) {
-            if(response.ok) {
+        .then(function (response) {
+            if (response.ok) {
                 return response.json();
             }
         })
         .then(function (data) {
-        console.log(data)  
+            console.log(data)
         })
 }
 
@@ -57,14 +57,14 @@ function getGameData () {
 //     var platform = document.querySelector("#platformBtn").value;
 //     var genre = document.querySelector("#genreBtn").value;
 
-    
+
 
 // })
 
 // submitBtn.on('click', function () {
 //     var platform = $("#platformBtn").attr('data-value');
 //     var genre = $("#genreBtn").attr('data-value');
-    
+
 
 //     if(platform.val === null || genre === null) {
 //         alert('Please select a platform and genre, gamer.')
@@ -179,24 +179,24 @@ function getGameData () {
 
 // function for youtube videos
 
-// function getYouTube(game) {
-//     var youTubeVideo = $("#youTubeVideo");
-//     var trailerUrl = "https://cors-anywhere.herokuapp.com/https://serpapi.com/search.json?engine=youtube&search_query=" + game + "&api_key=58f4d32ec9b9734f0935989c9def9f0766c97c4092a3e8b56d00745a828c4eb1";
+function getYouTube(game) {
+    var youTubeVideo = $("#youTubeVideo");
+    var trailerUrl = "https://cors-anywhere.herokuapp.com/https://serpapi.com/search.json?engine=youtube&search_query=" + game + "&api_key=58f4d32ec9b9734f0935989c9def9f0766c97c4092a3e8b56d00745a828c4eb1";
 
-//     fetch(trailerUrl)
-//         .then(function (response) {
-//             if (response.ok) {
-//                 return response.json();
-//             }
-//         })
-//         .then(function (data) {
-//             console.log(data.video_results);
-//             var url = data.video_results[0].link
-//             url = url.replace("watch?v=", "embed/")
-//             console.log(url);
-//             $(youTubeVideo).attr("src", url)
-//         });
-// }
+    fetch(trailerUrl)
+        .then(function (response) {
+            if (response.ok) {
+                return response.json();
+            }
+        })
+        .then(function (data) {
+            console.log(data.video_results);
+            var url = data.video_results[0].link
+            url = url.replace("watch?v=", "embed/")
+            console.log(url);
+            $(youTubeVideo).attr("src", url)
+        });
+}
 
 
-// getYouTube("skyrim+live+action+trailer");
+getYouTube("skyrim+live+action+trailer");
