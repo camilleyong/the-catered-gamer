@@ -1,21 +1,67 @@
+/* PLATFORM BUTTON clicked and SELECTION made - hold that selection in local storage
+ * *GENRE BUTTON clicked and SELECTION made - hold that selection in local storage
+ * 
+ * *now we've got values for PLATFORM and GENRES
+ * 
+ * *    var platform = $("#platform").attr('data-value');
+ * *   var genre = $("#genre").attr('data-value');
+ * *
+ * *   var getGames = url-api
+ * *    var submitBtn = $('#submit')
+ * *
+ * *   then listener for the SUBMIT BUTTON
+ * *   onclick (function(platform, genre)) {
+ * *        take those values, FETCH only that userInput Genre from UserInputPlatform}
+ * *  Or... fetch platform.val() first? , .then pull Genre from that list?
+ * 
+ * *   Fetch id's #'s that only match === userInput, 
+ * *    so now i've got 1 platform of results. Then give me userValue for Genre within that platform
+ * *        AND only give me 3 RANDOM results
+ * 
+ * *    CREATE ID TABLE FOR PLATFORM ID #'S AND GENRE NAMES "EXACT SPELLINGS"
+ * 
+ * *   if userInput is Playstation, read that as "id#??"; same for genres
+ * 
+ * TODO 1. Create reference tables for platform id's and genre names
+ * 
+ * todo 2. Create function(){} for storing PLATFORM and GENRE user selections to LOCAL STORAGE (done?)
+ * 
+ * TODO     2a. convert user selections to id#'s and "exactSpellingofGenres" per the API
+ * todo 
+ * 
+ * 3. onCLICK for the Submit button
+ * todo    3a. pull userInput from LOCAL STORAGE and apply those as FILTERS to the FETCH URL
+ * todo         ***LIMIT RESULTS TO THREE RANDOM OF array.length
+ */
+
+
+var platformBtn = $('#platform');
+var genreBtn = $('#genre');
 var submitBtn = $('#submit-btn');
+
+
+platformBtn.on('click', '.dropdown-item', function() {
+    console.log('.dropdown-item');
+});
+
+
+genreBtn.on('click', '.dropdown-item', function() {
+    console.log('.dropdown-item');
+});
 
 
 submitBtn.on('click', function () {
     var platform = $("#platform").attr('data-value');
     var genre = $("#genre").attr('data-value');
     
-    var selected = []
 
     if(platform.val === null || genre === null) {
-        alert('Please select a platform, gamer.')
+        alert('Please select a platform and genre, gamer.')
         return;
     }
-
-    $.each(platform, genre, function(){
-        selected.push($(this).val());
     })
-})
+
+
 
     
     
@@ -28,29 +74,6 @@ submitBtn.on('click', function () {
 //           localStorage.setItem("game",game)
 //          location.assign(queryString);
 //    }
-
-
-
-// //   }
-
-// //   images.addEventListener('click', handleSearchFormSubmit);
-
-// // TODO:  Build function to get Gamespot API DATA (filtered data should include NAME, DESCRIPTION, and GENRE to start; can add more later)
-// // TODO:  add appropriate reference in html
-// // TODO: set up LOCAL STORAGE for user's search fields.
-
-// /**
-//  * *PSEUDO-CODING THE FUNCTION:
-//  *          * computer, remember this function called 'getGamespot'
-//  *          * - and when you run it, tell it to reference the games library at gamespot:
-//  *          *      (URL: http://www.gamespot.com/api/games/?api_key=[YOUR API KEY])
-//  *          * - filters should limit data to be displayed on user's RESULTS page (i.e. NAME, DESCRIPTION, GENRE)
-//  *      ? NOTE - user's requests to be put into LOCAL STORAGE and then CALLED to the RESULTS page from Local Storage
-//  *      ?                -user request gets filtered through the function
-//  *              ? -will need to send data results to thumbnail selections (with youTube vid) and to the GAME INFO page
-//  */
-
-
 
 
 
