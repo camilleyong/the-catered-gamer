@@ -58,7 +58,8 @@ body {
 .card-container {
     background-color: var(--medGray);
     color: white;
-    font-weight: 30px;
+    text-align: center;
+    width: 50rem;
     max-width: 1000px;
     padding: 30px;
     margin: auto;
@@ -87,6 +88,12 @@ body {
     margin: 15px;
 
 }
+
+
+.submit-btn {
+    width: 30rem;
+    margin: 15px;
+   
 
 /* --SEARCH RESULTS-- */
 .search-results {
@@ -129,6 +136,7 @@ body {
 }
 
 
+}
 
 /* --SEARCH HISTORY-- */
 .search-history {
