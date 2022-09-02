@@ -65,16 +65,16 @@ body {
     margin: auto;
     margin-top: 200px;
     flex-direction: column;
-    text-align: center;    
+    text-align: center;
     height: auto;
 }
 
 /* DROP DOWN OPTIONS CARD */
-select {
-    width: 30rem;
-    margin-top: 2px;
-}
 
+select {
+  width: 30rem;
+    margin-top: 2px;
+    }
 
 #submit-btn {
     width: 30rem;
@@ -88,7 +88,7 @@ select {
     align-items: middle;
     display: flex;
     justify-content: center;
-    margin: auto;    
+    margin: auto;
 }
 
 .game-btn {

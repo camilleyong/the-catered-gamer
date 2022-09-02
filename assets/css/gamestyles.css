@@ -27,46 +27,11 @@ body {
 .navbar-brand {
     font-family: var(--titleFont);
     font-size: 40px;
-}
-
-.navbar-nav {
-    position: absolute;
-    right: 0px;
-    top: 20px;
-    align-items: center;
-    vertical-align: middle;
-
-}
-
-.nav-link {
-    border-radius: 10px;
-    color: var(--lightGray);
     transition: all 0.2s ease-in-out;
-    margin-right: 15px;
 }
 
-.nav-link:hover {
+.navbar-brand:hover{
     box-shadow: 0 5px 15px var(--glow);
     color: var(--glow);
-}
-
-/* DROP DOWN OPTIONS CARD */
-
-.find-game {
-    background-color: #CF9FFF;
-    text-align: center;
-    border: 2px solid black;
-    padding: 20px;
-    color: white;
-    font-weight: 30px;
-
-}
-
-.btn-group {
-    flex-direction: column;
-
-}
-
-button {
-    width: 40rem;
+    border-radius: 10px;    
 }

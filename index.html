@@ -45,6 +45,7 @@
             
             <div class="container-1">
                 <div class="btn-group1">
+
                     <div class="first-btn">
                         <select class="form-select form-select-lg mb-3 btn btn-secondary btn-lg" id="platform-drop" aria-label=".form-select-lg example">
                             <option selected>Platforms:</option>
@@ -57,6 +58,21 @@
                             <option class="dropdown-item" data-value="ios">IOS</option>
                             <option class="dropdown-item" data-value="android">Android</option>
                         </select>
+
+                    <div class="first-btn dropdown">
+                        <button id="platformBtn" class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Platforms:</button>
+                        <div class="dropdown dropdown-menu" id="platform-drop">
+                            <li class="dropdown-item" data-value="playstation-5">Playstation 5</li>
+                            <li class="dropdown-item" data-value="playstation-4">Playstation 4</li>
+                            <li class="dropdown-item" data-value="xbox-series">XBOX Series X/S</li>
+                            <li class="dropdown-item" data-value="xbox-one">XBOX One</li>
+                            <li class="dropdown-item" data-value="nintendo-switch">Nintendo Switch</li>
+                            <li class="dropdown-item" data-value="pc">PC</li>
+                            <li class="dropdown-item" data-value="ios">IOS</li>
+                            <li class="dropdown-item" data-value="android">Android</li>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -89,7 +105,7 @@
         </ul>
 </section>
 
-        <div class="search-results">
+        <div class="search-results" hidden>
             <div class="game-btn card">
                 <div class="row">
                     <!-- button to hold icon, push icon html as innertext based on genre, if loop? -->
