@@ -14,26 +14,12 @@ submitBtn.on("click", function(event) {
     var platformUrl = "https://api.rawg.io/api/platforms?key=0da6d52b21ec4d8fac88f4f4ceafe806"
 
 
-    // var platform = document.querySelector("#platform-drop").value;
-    // var genre = document.querySelector("#genre-drop").value;
+    var platform = document.querySelector("#platform-drop").value;
+    var genre = document.querySelector("#genre-drop").value;
+//! NOTE: THE DROPDOWN MENUS ARE NOT HOLDING THEIR VALUES WHEN FILTERING USER RESULTS
 
     var gameUrl = "https://api.rawg.io/api/games?genre="+genre+"&platform="+platform+"&key=0da6d52b21ec4d8fac88f4f4ceafe806"
     
-    
-    // fetch(platformUrl)
-    //     .then(function (response) {
-    //         if (response.ok) {
-    //             return response.json();
-    //         }
-    //     })
-    //     .then(function (data) {
-    //         console.log(data.results.name);
-    //         var platforms = data.results.name
-    //         console.log(platforms);
-    //         $(platform).attr('data-value',)assets/images/READme-headerImg.png
-    //     })
-
-
     fetch(gameUrl)
         .then(function (response) {
             if (response.ok) {
