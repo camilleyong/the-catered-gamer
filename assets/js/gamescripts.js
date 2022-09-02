@@ -24,7 +24,7 @@ function getGames() {
             console.log(data.results.name);
             var platforms = data.results.name
             console.log(platforms);
-            $(platform).attr('data-value',)
+            $(platform).attr('data-value',)assets/images/READme-headerImg.png
         })
 
 
