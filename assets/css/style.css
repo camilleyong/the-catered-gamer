@@ -93,7 +93,7 @@ body {
 .submit-btn {
     width: 30rem;
     margin: 15px;
-   
+}
 
 /* --SEARCH RESULTS-- */
 .search-results {
@@ -133,9 +133,6 @@ body {
 
 .description {
     flex-wrap: wrap;
-}
-
-
 }
 
 /* --SEARCH HISTORY-- */
