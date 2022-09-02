@@ -1,65 +1,60 @@
-/* PLATFORM BUTTON clicked and SELECTION made - hold that selection in local storage
- * *GENRE BUTTON clicked and SELECTION made - hold that selection in local storage
- * 
- * *now we've got values for PLATFORM and GENRES
- * 
- * *    var platform = $("#platform").attr('data-value');
- * *   var genre = $("#genre").attr('data-value');
- * *
- * *   var getGames = url-api
- * *    var submitBtn = $('#submit')
- * *
- * *   then listener for the SUBMIT BUTTON
- * *   onclick (function(platform, genre)) {
- * *        take those values, FETCH only that userInput Genre from UserInputPlatform}
- * *  Or... fetch platform.val() first? , .then pull Genre from that list?
- * 
- * *   Fetch id's #'s that only match === userInput, 
- * *    so now i've got 1 platform of results. Then give me userValue for Genre within that platform
- * *        AND only give me 3 RANDOM results
- * 
- * *    CREATE ID TABLE FOR PLATFORM ID #'S AND GENRE NAMES "EXACT SPELLINGS"
- * 
- * *   if userInput is Playstation, read that as "id#??"; same for genres
- * 
- * TODO 1. Create reference tables for platform id's and genre names
- * 
- * todo 2. Create function(){} for storing PLATFORM and GENRE user selections to LOCAL STORAGE (done?)
- * 
- * TODO     2a. convert user selections to id#'s and "exactSpellingofGenres" per the API
- * todo 
- * 
- * 3. onCLICK for the Submit button
- * todo    3a. pull userInput from LOCAL STORAGE and apply those as FILTERS to the FETCH URL
- * todo         ***LIMIT RESULTS TO THREE RANDOM OF array.length
- */
+console.log("it's linked")
 
-
-var platformBtn = $('#platform');
-var genreBtn = $('#genre');
+var platformBtn = $('#platformBtn');
+var genreBtn = $('#genreBtn');
 var submitBtn = $('#submit-btn');
 
 
-platformBtn.on('click', '.dropdown-item', function() {
-    console.log('.dropdown-item');
-});
 
 
-genreBtn.on('click', '.dropdown-item', function() {
-    console.log('.dropdown-item');
-});
+function getGameData () {
+    var gameUrl = "https://api.rawg.io/api/games?key=fec3f6fd194f4e91bd4b7a9873506189"
+    
+    fetch(gameUrl)
+    console.log("hi")
+        .then(function(response) {
+            if(response.ok) {
+                return response.json();
+            }
+        })
+        .then(function (data) {
+        console.log(data)  
+        })
+}
 
 
-submitBtn.on('click', function () {
-    var platform = $("#platform").attr('data-value');
-    var genre = $("#genre").attr('data-value');
+
+
+
+// platformBtn.on('click', '.dropdown-item', function() {
+//     localStorage.setItem('.dropdown-item')
+// });
+
+// genreBtn.on('click', '.dropdown-item', function() {
+//     localStorage.setItem('dropdown-item'.val)
+//     })
+
+
+// submitBtn.addEventListener("click", function(event) {
+//     event.preventDefault();
+
+//     var platform = document.querySelector("#platformBtn").value;
+//     var genre = document.querySelector("#genreBtn").value;
+
     
 
-    if(platform.val === null || genre === null) {
-        alert('Please select a platform and genre, gamer.')
-        return;
-    }
-    })
+// })
+
+// submitBtn.on('click', function () {
+//     var platform = $("#platformBtn").attr('data-value');
+//     var genre = $("#genreBtn").attr('data-value');
+    
+
+//     if(platform.val === null || genre === null) {
+//         alert('Please select a platform and genre, gamer.')
+//         return;    
+//     }
+//     })
 
 
 
@@ -87,23 +82,23 @@ submitBtn.on('click', function () {
 
 
 
-function getYouTube(game) {
-    var youTubeVideo = $("#youTubeVideo");
-    var trailerUrl = "https://cors-anywhere.herokuapp.com/https://serpapi.com/search.json?engine=youtube&search_query=" + game + "&api_key=58f4d32ec9b9734f0935989c9def9f0766c97c4092a3e8b56d00745a828c4eb1";
+// function getYouTube(game) {
+//     var youTubeVideo = $("#youTubeVideo");
+//     var trailerUrl = "https://cors-anywhere.herokuapp.com/https://serpapi.com/search.json?engine=youtube&search_query=" + game + "&api_key=58f4d32ec9b9734f0935989c9def9f0766c97c4092a3e8b56d00745a828c4eb1";
 
-    fetch(trailerUrl)
-        .then(function (response) {
-            if (response.ok) {
-                return response.json();
-            }
-        })
-        .then(function (data) {
-            console.log(data.video_results);
-            var url = data.video_results[0].link
-            url = url.replace("watch?v=", "embed/")
-            console.log(url);
-            $(youTubeVideo).attr("src", url)
-        });
-}
+//     fetch(trailerUrl)
+//         .then(function (response) {
+//             if (response.ok) {
+//                 return response.json();
+//             }
+//         })
+//         .then(function (data) {
+//             console.log(data.video_results);
+//             var url = data.video_results[0].link
+//             url = url.replace("watch?v=", "embed/")
+//             console.log(url);
+//             $(youTubeVideo).attr("src", url)
+//         });
+// }
 
-getYouTube("skyrim+live+action+trailer");
+// getYouTube("skyrim+live+action+trailer");
