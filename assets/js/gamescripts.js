@@ -23,12 +23,14 @@ submitBtn.on('click', '.dropdown-item', function () {
 })
 // ? and here we can put the codes for the get item and pass it down to get youtube
 // function to call games 
+var submitBtn = $("#submit-btn");
 
-
-function getGames() {
-    var platform = ("#platform")
+submitBtn.on("click", function(event) {
+    event.preventDefault();
+    var platform = $("#platform")
     var genre = $("#genre")
     var image = $("#image")
+
     var games = $("#games")
     var gameUrl = "https://cors-anywhere.herokuapp.com/https://api.rawg.io/api/genres?key=0da6d52b21ec4d8fac88f4f4ceafe806"
     var platformUrl = "https://cors-anywhere.herokuapp.com/https://api.rawg.io/api/platforms?key=0da6d52b21ec4d8fac88f4f4ceafe806"
@@ -49,6 +51,30 @@ function getGames() {
     //     })
 
 
+    var game = $("#game")
+    
+    var platformUrl = "https://api.rawg.io/api/platforms?key=0da6d52b21ec4d8fac88f4f4ceafe806"
+
+
+    var platform = document.querySelector("#platform-drop").value;
+    var genre = document.querySelector("#genre-drop").value;
+//! NOTE: THE DROPDOWN MENUS ARE NOT HOLDING THEIR VALUES WHEN FILTERING USER RESULTS
+
+    var gameUrl = "https://api.rawg.io/api/games?genre="+genre+"&platform="+platform+"&key=0da6d52b21ec4d8fac88f4f4ceafe806"
+    
+    fetch(gameUrl)
+        .then(function (response) {
+            if (response.ok) {
+                return response.json();
+            }
+        })
+        .then(function (data) {
+            console.log(data.results);
+            // var genres = data.results.name
+            // console.log(genres);
+            // $(genre).attr('data-value',)
+        })
+
     // fetch(gameUrl)
     //     .then(function (response) {
     //         if (response.ok) {
@@ -56,12 +82,22 @@ function getGames() {
     //         }
     //     })
     //     .then(function (data) {
+
     //         console.log(data.results.name);
     //         var genres = data.results.name
     //         console.log(genres);
     //         $(genre).text(genres)
     //     })
     // ? this i think is useless because it will just display one bg image and is not really related to the game but to the genre.
+
+    //         console.log(data.results.image_background);
+    //         var img = data.results.image_background
+    //         console.log(img);
+    //         $(image).attr('data-value',)
+    //     })
+
+
+
     // fetch(gameUrl)
     //     .then(function (response) {
     //         if (response.ok) {
@@ -69,6 +105,7 @@ function getGames() {
     //         }
     //     })
     //     .then(function (data) {
+
     //         console.log(data.results.image_background);
     //         var img = data.results.image_background
     //         console.log(img);
@@ -91,6 +128,19 @@ function getGames() {
         });
 }
 getGames();
+
+    //         console.log(data.results.games.name);
+    //         var games = data.results.games.name
+    //         console.log(games);
+    //         $(game).attr('data-value',)
+    //         // 3 games
+    //     });
+    })
+
+
+
+
+
 
 //function for youtube videos
 //? This is where i think we just need 1 get youtube function cause there will only be one video depending on the search
@@ -117,6 +167,7 @@ getYouTube();
 
 
 // function for youtube videos
+
 // ? i'll just comment this out because it got duplicated.
 // function getYouTube(game) {
 //     var youTubeVideo = $("#youTubeVideo");
@@ -136,3 +187,24 @@ getYouTube();
 //             $(youTubeVideo).attr("src", url)
 //         });
 // }}
+
+
+function getYouTube(game) {
+    var youTubeVideo = $("#youTubeVideo");
+    var trailerUrl = "https://cors-anywhere.herokuapp.com/https://serpapi.com/search.json?engine=youtube&search_query=" + game + "&api_key=58f4d32ec9b9734f0935989c9def9f0766c97c4092a3e8b56d00745a828c4eb1";
+
+    fetch(trailerUrl)
+        .then(function (response) {
+            if (response.ok) {
+                return response.json();
+            }
+        })
+        .then(function (data) {
+            console.log(data.video_results);
+            var url = data.video_results[0].link
+            url = url.replace("watch?v=", "embed/")
+            console.log(url);
+            $(youTubeVideo).attr("src", url)
+        });
+}
+
