@@ -42,9 +42,18 @@
 
     <section class="card-container">
 
-        <div class="find-game">
-            <h1>Find Your Next Game:</h1>
+        <!-- FIND GAME CARD WILL SHOW 2 DROPDOWNS FOR PLATFORMS AND GENRE -->
+        <!-- 
+            on click submit btn for find-game; 
+            make:
+                find-game display:none; & search-results display:flex;
             
+            need to make click action for icon button
+        -->
+
+        <div class="find-game" hidden>
+
+            <h1>Find Your Next Game:</h1>
             <div class="container-1">
                 <div class="btn-group1">
                     <div class="first-btn">
@@ -62,7 +71,7 @@
                     </div>
                 </div>
             </div>
-        </div> 
+        
             <div class="container-2">
                 <div class="btn-group2">
                     <div class="second-btn">
@@ -82,6 +91,48 @@
         </div>
                         <button type="button" class="btn btn-secondary btn-lg" id="submit-btn">Submit</button>
     </div>
+
+    <!-- SEARCH RESULTS CARD - WILL DISPLAY 3 GAME OPTIONS -->
+
+    <div class="search-results">
+        <div class="game-btn card">
+            <div class="row">
+                <!-- button to hold icon, push icon html as innertext based on genre, if loop? -->
+                <button class="game-icon">icon</button>
+                <div class="info-container">
+                <h3 class="game-title">Game Title</h3>
+                <p class="description">Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, exercitationem.</p>
+                <p class="game-platforms">icon</p>
+                <p class="release-date">00/00/0000</p>
+                </div>
+            </div>
+        </div>
+        <div class="game-btn card">
+            <div class="row">
+                <!-- button to hold icon, push icon html as innertext based on genre, if loop? -->
+                <button class="game-icon">icon</button>
+                <div class="info-container">
+                <h3 class="game-title">Game Title</h3>
+                <p class="description">Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, exercitationem.</p>
+                <p class="game-platforms">icon</p>
+                <p class="release-date">00/00/0000</p>
+                </div>
+            </div>
+        </div>
+        <div class="game-btn card">
+            <div class="row">
+                <!-- button to hold icon, push icon html as innertext based on genre, if loop? -->
+                <button class="game-icon">icon</button>
+                <div class="info-container">
+                <h3 class="game-title">Game Title</h3>
+                <p class="description">Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, exercitationem.</p>
+                <p class="game-platforms">icon</p>
+                <p class="release-date">00/00/0000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </section>
 
 
@@ -91,46 +142,9 @@
         </ul>
 </section>
 
-        <div class="search-results" hidden>
-            <div class="game-btn card">
-                <div class="row">
-                    <!-- button to hold icon, push icon html as innertext based on genre, if loop? -->
-                    <button class="game-icon">icon</button>
-                    <div class="info-container">
-                    <h3 class="game-title">Game Title</h3>
-                    <p class="description">Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, exercitationem.</p>
-                    <p class="game-platforms">icon</p>
-                    <p class="release-date">00/00/0000</p>
-                    </div>
-                </div>
-            </div>
-            <div class="game-btn card">
-                <div class="row">
-                    <!-- button to hold icon, push icon html as innertext based on genre, if loop? -->
-                    <button class="game-icon">icon</button>
-                    <div class="info-container">
-                    <h3 class="game-title">Game Title</h3>
-                    <p class="description">Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, exercitationem.</p>
-                    <p class="game-platforms">icon</p>
-                    <p class="release-date">00/00/0000</p>
-                    </div>
-                </div>
-            </div>
-            <div class="game-btn card">
-                <div class="row">
-                    <!-- button to hold icon, push icon html as innertext based on genre, if loop? -->
-                    <button class="game-icon">icon</button>
-                    <div class="info-container">
-                    <h3 class="game-title">Game Title</h3>
-                    <p class="description">Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, exercitationem.</p>
-                    <p class="game-platforms">icon</p>
-                    <p class="release-date">00/00/0000</p>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-    </section>
+
+    
 </body>
 
 <footer>
