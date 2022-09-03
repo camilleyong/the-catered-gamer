@@ -76,6 +76,9 @@ submitBtn.on("click", function(event) {
     //     });
     })
 
+// LOCAL STORAGE FOR PLATFORMS, GENRE, AND SAVE BUTTON
+
+
 
 
 
