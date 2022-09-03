@@ -79,3 +79,13 @@ body {
 .gameplay-title {
     margin: 10px;
 }
+
+.footer {
+    background-color: var(--darkGray);
+    color: var(--lightGray);
+}
+
+.card-body {
+    max-width: 1000px;
+    margin: auto;
+}
