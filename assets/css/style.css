@@ -87,7 +87,7 @@ select {
 .search-results {
     align-items: middle;
     align-items: center;
-    display: flex;
+    display: none;
     justify-content: center;
     margin: auto;
     flex-direction: column;
@@ -132,6 +132,17 @@ select {
     display: flex;
     justify-content: center;
     margin: auto;
-    margin-top: 300px;
+    margin-top: 200px;
+    margin-bottom: 200px;
     color: var(--white);
+}
+
+.footer {
+    background-color: var(--darkGray);
+    color: var(--lightGray);
+}
+
+.card-body {
+    max-width: 1000px;
+    margin: auto;
 }
