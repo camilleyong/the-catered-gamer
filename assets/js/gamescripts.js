@@ -32,23 +32,23 @@ submitBtn.on("click", function(event) {
     var image = $("#image")
 
     var games = $("#games")
-    var gameUrl = "https://cors-anywhere.herokuapp.com/https://api.rawg.io/api/genres?key=0da6d52b21ec4d8fac88f4f4ceafe806"
-    var platformUrl = "https://cors-anywhere.herokuapp.com/https://api.rawg.io/api/platforms?key=0da6d52b21ec4d8fac88f4f4ceafe806"
+    var gameUrl = "https://cors-anywhere.herokuapp.com/https://api.rawg.io/api/games?key=0da6d52b21ec4d8fac88f4f4ceafe806"
+    // var platformUrl = "https://cors-anywhere.herokuapp.com/https://api.rawg.io/api/platforms?key=0da6d52b21ec4d8fac88f4f4ceafe806"
 
 
     // ? This is the fetch i was referring to as reference because the platforms and genres were already provided in index.html
-    // fetch(platformUrl)
-    //     .then(function (response) {
-    //         if (response.ok) {
-    //             return response.json();
-    //         }
-    //     })
-    //     .then(function (data) {
-    //         console.log(data.results.name);
-    //         var platforms = data.results.name
-    //         console.log(platforms);
-    //         $(platform).attr('data-value',)
-    //     })
+    fetch(platformUrl)
+        .then(function (response) {
+            if (response.ok) {
+                return response.json();
+            }
+        })
+        .then(function (data) {
+            console.log(data.results.name);
+            var platforms = data.results.name
+            console.log(platforms);
+            $(platform).attr('data-value',)
+        })
 
 
     var game = $("#game")
@@ -126,8 +126,7 @@ submitBtn.on("click", function(event) {
             $(games).text(games)
             // 3 games
         });
-}
-getGames();
+})
 
     //         console.log(data.results.games.name);
     //         var games = data.results.games.name
@@ -135,7 +134,6 @@ getGames();
     //         $(game).attr('data-value',)
     //         // 3 games
     //     });
-    })
 
 
 
