@@ -25,7 +25,7 @@ submitBtn.on('click', '.dropdown-item', function () {
 // function to call games 
 var submitBtn = $("#submit-btn");
 
-submitBtn.on("click", function(event) {
+submitBtn.on("click", function (event) {
     event.preventDefault();
     var platform = $("#platform")
     var genre = $("#genre")
@@ -52,16 +52,16 @@ submitBtn.on("click", function(event) {
 
 
     var game = $("#game")
-    
+
     var platformUrl = "https://api.rawg.io/api/platforms?key=0da6d52b21ec4d8fac88f4f4ceafe806"
 
 
     var platform = document.querySelector("#platform-drop").value;
     var genre = document.querySelector("#genre-drop").value;
-//! NOTE: THE DROPDOWN MENUS ARE NOT HOLDING THEIR VALUES WHEN FILTERING USER RESULTS
+    //! NOTE: THE DROPDOWN MENUS ARE NOT HOLDING THEIR VALUES WHEN FILTERING USER RESULTS
 
-    var gameUrl = "https://api.rawg.io/api/games?genre="+genre+"&platform="+platform+"&key=0da6d52b21ec4d8fac88f4f4ceafe806"
-    
+    var gameUrl = "https://api.rawg.io/api/games?genre=" + genre + "&platform=" + platform + "&key=0da6d52b21ec4d8fac88f4f4ceafe806"
+
     fetch(gameUrl)
         .then(function (response) {
             if (response.ok) {
@@ -128,12 +128,12 @@ submitBtn.on("click", function(event) {
         });
 })
 
-    //         console.log(data.results.games.name);
-    //         var games = data.results.games.name
-    //         console.log(games);
-    //         $(game).attr('data-value',)
-    //         // 3 games
-    //     });
+//         console.log(data.results.games.name);
+//         var games = data.results.games.name
+//         console.log(games);
+//         $(game).attr('data-value',)
+//         // 3 games
+//     });
 
 
 
@@ -187,22 +187,22 @@ getYouTube();
 // }}
 
 
-function getYouTube(game) {
-    var youTubeVideo = $("#youTubeVideo");
-    var trailerUrl = "https://cors-anywhere.herokuapp.com/https://serpapi.com/search.json?engine=youtube&search_query=" + game + "&api_key=58f4d32ec9b9734f0935989c9def9f0766c97c4092a3e8b56d00745a828c4eb1";
+// function getYouTube(game) {
+//     var youTubeVideo = $("#youTubeVideo");
+//     var trailerUrl = "https://cors-anywhere.herokuapp.com/https://serpapi.com/search.json?engine=youtube&search_query=" + game + "&api_key=58f4d32ec9b9734f0935989c9def9f0766c97c4092a3e8b56d00745a828c4eb1";
 
-    fetch(trailerUrl)
-        .then(function (response) {
-            if (response.ok) {
-                return response.json();
-            }
-        })
-        .then(function (data) {
-            console.log(data.video_results);
-            var url = data.video_results[0].link
-            url = url.replace("watch?v=", "embed/")
-            console.log(url);
-            $(youTubeVideo).attr("src", url)
-        });
-}
+//     fetch(trailerUrl)
+//         .then(function (response) {
+//             if (response.ok) {
+//                 return response.json();
+//             }
+//         })
+//         .then(function (data) {
+//             console.log(data.video_results);
+//             var url = data.video_results[0].link
+//             url = url.replace("watch?v=", "embed/")
+//             console.log(url);
+//             $(youTubeVideo).attr("src", url)
+//         });
+// }
 
