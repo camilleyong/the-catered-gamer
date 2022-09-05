@@ -2,6 +2,11 @@ var platformBtn = $('#platform-drop');
 var genreBtn = $('#genre-drop');
 var submitBtn = $('#submit-btn');
 
+// Define variables for model
+const openModalBtn = $('[data-model-target]');
+const closeModalBtn = $('[data-model-close');
+
+
 
 //* Our on-click event for the submit button. 
 submitBtn.on('click', function(event){
@@ -16,7 +21,7 @@ submitBtn.on('click', function(event){
 
     //*the response a user will receive if they do no choose a platform or genre
     if (!platformSelection || !genreSelection) {
-        
+        document.querySelector('.')
     }
 
     //*Our rawg.api source for games linked here, with the user's selections as queries
