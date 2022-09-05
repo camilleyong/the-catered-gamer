@@ -46,6 +46,6 @@ function selectThree(results) {
         bucket.push(randomGames[0]); //*the results get pushed into our BUCKET array
         console.log("randomGame", randomGames);
     })
-    console.log(bucket);
+    // console.log(bucket);
     return bucket;//*bingo bango! Christian should be able to build off of this, I believe.
 }
