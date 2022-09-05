@@ -132,6 +132,7 @@ select {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%)scale(0);
+    transition: 200ms ease-in-out;
     max-width: 500px;
     height: 200px;
     flex-direction: column;
@@ -160,13 +161,14 @@ select {
 
 #overlay {
     position: fixed;
-    /* opacity: 0; */
+    opacity: 0;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
     background-color: rgb(0, 0, 0, 0.5);
     pointer-events: none;
+    transition: 200ms ease-in-out;
 }
 
 /* --SEARCH HISTORY-- */
