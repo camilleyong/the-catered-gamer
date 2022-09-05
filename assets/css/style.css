@@ -82,10 +82,11 @@ select {
     background-color: #CF9FFF;
 }
 
-/* .dropdown-item {
+.dropdown-item option {
     background-color: #6c757d;
     color: white;
-} */
+    font-family: var(--textFont);
+}
 
 
 /* --SEARCH RESULTS-- */
