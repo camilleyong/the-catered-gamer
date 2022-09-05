@@ -28,11 +28,11 @@
             <a class="navbar-brand text-white" href="#">The Catered Gamer</a>
             <div id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="#">Features</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Search History</a>
+                        <a class="nav-link" href="#search-history">Search History</a>
                     </li>
                 </ul>
             </div>
@@ -90,45 +90,22 @@
             </div>
         </div>
                         <button type="button" class="btn btn-secondary btn-lg" id="submit-btn">Submit</button>
-        <pre id="data"></pre>  //        
+                        <!-- change to "display:inline;" in js -- button opens modal, will be invisible unless the user does not choose a genre or platform -->
+                        <button type="button" data-modal-target="#modal"  class="model-open btn btn-secondary btn-lg">Uh-Oh! Click Here...</button>
+                        <pre id="data"></pre>         
     </div>
 
-    
-</section>
-
-
     <!-- SEARCH RESULTS CARD - WILL DISPLAY 3 GAME OPTIONS -->
-
-
-<section class="search-history card">
-        <h2 class="p-2">TAKE ANOTHER LOOK...</h2>
-            <ul class="search-history">
-        </ul>
-</section>
-
-        <div class="search-results" hidden>
-            <div class="game-btn card">
-                <div class="row">
-                    <!-- button to hold icon, push icon html as innertext based on genre, if loop? -->
-                    <button class="game-icon">icon</button>
-                    <div class="info-container">
-                    <h3 class="game-title">Game Title</h3>
-                    <p class="description">Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, exercitationem.</p>
-                    <p class="game-platforms">icon</p>
-                    <p class="release-date">00/00/0000</p>
-                    </div>
-
     <div class="search-results">
         <div class="game-btn card">
             <div class="row">
                 <!-- button to hold icon, push icon html as innertext based on genre, if loop? -->
                 <button class="game-icon">icon</button>
                 <div class="info-container">
-                <h3 class="game-title">Game Title</h3>
-                <p class="description">Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, exercitationem.</p>
-                <p class="game-platforms">icon</p>
-                <p class="release-date">00/00/0000</p>
-
+                    <h3 class="game-title">Game Title</h3>
+                    <p class="description">Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, exercitationem.</p>
+                    <p class="game-platforms">icon</p>
+                    <p class="release-date">00/00/0000</p>
                 </div>
             </div>
         </div>
@@ -137,10 +114,10 @@
                 <!-- button to hold icon, push icon html as innertext based on genre, if loop? -->
                 <button class="game-icon">icon</button>
                 <div class="info-container">
-                <h3 class="game-title">Game Title</h3>
-                <p class="description">Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, exercitationem.</p>
-                <p class="game-platforms">icon</p>
-                <p class="release-date">00/00/0000</p>
+                    <h3 class="game-title">Game Title</h3>
+                    <p class="description">Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, exercitationem.</p>
+                    <p class="game-platforms">icon</p>
+                    <p class="release-date">00/00/0000</p>
                 </div>
             </div>
         </div>
@@ -149,43 +126,48 @@
                 <!-- button to hold icon, push icon html as innertext based on genre, if loop? -->
                 <button class="game-icon">icon</button>
                 <div class="info-container">
-                <h3 class="game-title">Game Title</h3>
-                <p class="description">Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, exercitationem.</p>
-                <p class="game-platforms">icon</p>
+                    <h3 class="game-title">Game Title</h3>
+                    <p class="description">Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, exercitationem.</p>
+                    <p class="game-platforms">icon</p>
                 <p class="release-date">00/00/0000</p>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- ERROR MODAL POP UP -->
+    
+    <div class="modal active" id="modal">
+        <div class="modal-header">
+            <div class="modal-title">Getting Started</div>
+            <button data-close-button class="close-btn">&times;</button>
+        </div>
+        <div class="modal-body">
+            Please choose a platform and genre to begin looking for games. 
+            Once you have chosen both, click on the "Submit" button to see
+            the games you want.
+        </div>
+    </div>
+    <div id="overlay"></div>
+
 </section>
 
 
-    <section class="search-history card">
+<section id="search-history" class="search-history card">
         <h2 class="p-2">TAKE ANOTHER LOOK...</h2>
             <ul class="search-history">
         </ul>
 </section>
 
 
-    </section>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"
     integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"  integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 <!-- <script src="./assets/js/gamescripts.js"> </script> -->
 <script src="assets/js/welcome.js"></script>
+
 </body>
 
-<footer>
-
-
-
-<script src="https://code.jquery.com/jquery-3.6.1.min.js"
-    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-
-    
-</body>
 
 <footer>
 

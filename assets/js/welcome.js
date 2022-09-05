@@ -15,7 +15,7 @@ submitBtn.on('click', function(event){
     console.log("genre", genreSelection)
 
     //*Our rawg.api source for games linked here, with the user's selections as queries
-    var gamesUrl = "https://api.rawg.io/api/games?genres="+genreSelection+"&platforms="+platformSelection+"&key=85d5e3870a5046f683d564278fafc1df";
+    var gamesUrl = 'https://api.rawg.io/api/games?genres='+genreSelection+'&platforms='+platformSelection+'&key=85d5e3870a5046f683d564278fafc1df';
 
     //*the fetch call...
     fetch(gamesUrl)
@@ -30,6 +30,7 @@ submitBtn.on('click', function(event){
         var selectedThree = selectThree(data.results);
         console.log(selectedThree)
     })
+    
 })
 
 //*our selectThree function to get our random 3 results
