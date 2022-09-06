@@ -14,10 +14,8 @@
 body {
     font-family: var(--textFont);
     background-image: url("../images/manny-becerra-mMUo6jghVa8-unsplash.jpg");
-    
+
 }
-
-
 
 /* NAVIGATION BAR */
 
@@ -59,8 +57,7 @@ body {
     background-color: var(--medGray);
     color: white;
     text-align: center;
-    width: 50rem;
-    max-width: 1000px;
+    max-width: 50rem;
     padding: 30px;
     margin: auto;
     margin-top: 200px;
@@ -74,7 +71,7 @@ body {
 select {
     width: 30rem;
     margin-top: 2px;
-    }
+}
 
 #submit-btn {
     width: 30rem;
@@ -125,16 +122,72 @@ select {
     flex-wrap: wrap;
 }
 
+/* ---MODAL--- */
+.model-open {
+    width: 480px;
+    margin-top: 15px;
+    display: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)scale(0);
+    transition: 200ms ease-in-out;
+    max-width: 500px;
+    height: 200px;
+    flex-direction: column;
+    background-color: var(--lightGray);
+    color: var(--darkGray);
+    border: var(--darkGray);
+    z-index: 10;
+}
+
+.dontDisplay {
+    display: none;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%)scale(1);
+}
+
+.modal-title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.close-btn {
+    margin-left: 60px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: 1.25rem;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0, 0.5);
+    pointer-events: none;
+    transition: 200ms ease-in-out;
+}
+
 /* --SEARCH HISTORY-- */
 .search-history {
     background-color: var(--darkGray);
-    max-width: 1000px;
+    max-width: 50rem;
     display: flex;
     justify-content: center;
     margin: auto;
     margin-top: 200px;
     margin-bottom: 200px;
-    color: var(--white);
+    color: var(--lightGray);
 }
 
 .footer {
@@ -145,4 +198,45 @@ select {
 .card-body {
     max-width: 1000px;
     margin: auto;
+}
+
+@media screen and (max-width: 850px) {
+    /* transition: 200ms ease-in-out; */
+
+    .card-container {
+        width: 80%;
+    }
+
+    .search-history {
+        width: 80%;
+    }
+
+    .btn-secondary {
+        width: 80%;
+    }
+
+    #submit-btn {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:670px) {
+
+    nav {
+        height: 150px;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    #navbarNav {
+        /* display: flex;
+        flex-direction: column;
+        height: auto; */
+        /* display: block; */
+        /* margin:auto; */
+    }
 }
