@@ -17,8 +17,6 @@ body {
     
 }
 
-
-
 /* NAVIGATION BAR */
 
 .navbar {
@@ -81,7 +79,7 @@ select {
     background-color: #CF9FFF;
 }
 
-.dropdown-item option {
+select:selected {
     background-color: #6c757d;
     color: white;
     font-family: var(--textFont);
