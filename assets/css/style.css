@@ -17,8 +17,6 @@ body {
 
 }
 
-
-
 /* NAVIGATION BAR */
 
 .navbar {
@@ -220,6 +218,10 @@ select {
     #submit-btn {
         width: 80%;
     }
+}
+
+#rawgTag {
+    color: white;
 }
 
 @media screen and (max-width:670px) {

@@ -3,7 +3,11 @@
   <h1 align="center">Find Your Next Game</h1>
 </p>
 
-## Live link:
+<a href="#livelink/">The Catered Gamer: Online Link</a><br />
+
+<a href="https://github.com/camilleyong/the-catered-gamer/">Github Repository for "The Catered Gamer"</a><br />
+
+## Table of Contents
 - [Description](#description)
 - [Motivation](#motivation)
 - [Usage](#usage)
@@ -46,7 +50,7 @@ Once the page is loaded, select your desired PLATFORM and GENRE from the drop do
   </tr>
 </table>
 
-
+alt
 ## APIs
 
 <a title="RAWGvideoGamesDatabase" href="https://rawg.io/apidocs">RAWG Video Games Database</a><br /><a title="youTubevids" href="#placeholder">youTube API</a>
