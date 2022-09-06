@@ -1,12 +1,14 @@
-var miniClick = $('.game-btn')
+var miniClick = $('.game-icon')
 var platformBtn = $('#platform-drop');
 var genreBtn = $('#genre-drop');
 var submitBtn = $('#submit-btn');
 var firstGame = $('#firstGame');
 var secondGame = $('#secondGame');
 var thirdGame = $('#thirdGame');
+// var getTrioData = localStorage.setItem('.dontDisplay', imageClicked)(JSON.stringify())
 
 
+// export { getTrioData }
 
 //* Our on-click event for the submit button. 
 submitBtn.on('click', function (event) {
@@ -113,17 +115,8 @@ submitBtn.on('click', function (event) {
             rate: gameRate
         }
 
-        // export{
-        //     (getTrioData)}
-
-
         var getTrioData = localStorage.setItem('.dontDisplay', imageClicked)(JSON.stringify())
-
-        // export (var getTrioData)
-
-
-
-
+        export { getTrioData }
         location.href = "game.html";
     })
 
