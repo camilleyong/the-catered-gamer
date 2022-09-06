@@ -5,10 +5,9 @@ var submitBtn = $('#submit-btn');
 var firstGame = $('#firstGame');
 var secondGame = $('#secondGame');
 var thirdGame = $('#thirdGame');
-// var getTrioData = localStorage.setItem('.dontDisplay', imageClicked)(JSON.stringify())
 
 
-// export { getTrioData }
+
 
 //* Our on-click event for the submit button. 
 submitBtn.on('click', function (event) {
@@ -116,14 +115,13 @@ submitBtn.on('click', function (event) {
         }
 
         var getTrioData = localStorage.setItem('.dontDisplay', imageClicked)(JSON.stringify())
-        export { getTrioData }
         location.href = "game.html";
     })
 
 
-    //? then we do the location.change to game.html
-
 })
+export { getTrioData }
+var getTrioData
 
 //*our selectThree function to get our random 3 results
 function selectThree(results) {
