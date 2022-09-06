@@ -5,6 +5,19 @@ var submitBtn = $('#submit-btn');
 var firstGame = $('#firstGame');
 var secondGame = $('#secondGame');
 var thirdGame = $('#thirdGame');
+// var response = $('#error');
+
+
+
+//  ERROR MESSAGE OPTION 2 IF MODAL DOES NOT WORK 
+
+// submitBtn.on('click', function(event) {
+//     event.preventDefault();
+//     console.log(event);
+//     var errorResponse = "Please select a Platform and Genre option";
+//     response.text(errorResponse);
+// });
+
 
 
 //* Our on-click event for the submit button. 
