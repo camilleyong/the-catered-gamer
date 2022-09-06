@@ -231,6 +231,10 @@ select {
     }
 }
 
+#rawgTag {
+    color: white;
+}
+
 @media screen and (max-width:670px) {
 
     nav {
