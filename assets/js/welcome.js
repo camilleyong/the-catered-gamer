@@ -22,13 +22,17 @@ var thirdGame = $('#thirdGame');
 
 
 
+
+
 //* Our on-click event for the submit button. 
 submitBtn.on('click', function (event) {
     event.preventDefault();
 
 
+
     $('.find-game').css('display', 'none');
     $('.search-results').css('display', 'flex');
+
 
 
     //*Here, we get the values that the user selected from each drop down menu
@@ -132,9 +136,11 @@ submitBtn.on('click', function (event) {
     })
 
 
+
 })
 export { getTrioData }
 var getTrioData
+
 
 //*our selectThree function to get our random 3 results
 function selectThree(results) {
@@ -154,3 +160,4 @@ function selectThree(results) {
 
 
 }
+
