@@ -2,12 +2,14 @@ var platformBtn = $('#platform-drop');
 var genreBtn = $('#genre-drop');
 var submitBtn = $('#submit-btn');
 
+// Define variables for model
+const openModalBtn = $('[data-model-target]');
+const closeModalBtn = $('[data-model-close');
+var modalBtn = document.querySelector('.open-modal')
+
 //* Our on-click event for the submit button. 
 submitBtn.on('click', function(event){
     event.preventDefault();
-
-    $('.find-game').css('display', 'none');
-    $('.search-results').css('display', 'flex');
 
     //*Here, we get the values that the user selected from each drop down menu
     var platformSelection = $('#platform-drop').val();
@@ -15,8 +17,18 @@ submitBtn.on('click', function(event){
     var genreSelection = $('#genre-drop').val();
     console.log("genre", genreSelection)
 
+    let str = '';
+
+    if (str === null) {
+    console.log('error')
+    $('.modal-open').css('display', 'inline');
+    } 
+    else {
+        console.log(failure)
+    }
+
     //*Our rawg.api source for games linked here, with the user's selections as queries
-    var gamesUrl = 'https://api.rawg.io/api/games?genres='+genreSelection+'&platforms='+platformSelection+'&key=85d5e3870a5046f683d564278fafc1df';
+    var gamesUrl = "https://api.rawg.io/api/games?genres="+genreSelection+"&platforms="+platformSelection+"&key=85d5e3870a5046f683d564278fafc1df";
 
     //*the fetch call...
     fetch(gamesUrl)
@@ -31,6 +43,9 @@ submitBtn.on('click', function(event){
         var selectedThree = selectThree(data.results);
         console.log(selectedThree)
     })
+
+    $('.find-game').css('display', 'none');
+    $('.search-results').css('display', 'flex');
     
 })
 

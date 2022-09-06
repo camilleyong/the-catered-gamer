@@ -66,6 +66,12 @@ body {
     height: auto;
 }
 
+.dropdown-item {
+    background-color: var(--medGray);
+    font: var(--textFont);
+    color: var(--darkGray);
+}
+
 /* DROP DOWN OPTIONS CARD */
 
 select {
@@ -126,7 +132,7 @@ select {
 .model-open{
     width: 480px;
     margin-top: 15px;
-    display:none;
+    display: none;
 }
 
 .modal {
