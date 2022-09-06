@@ -66,6 +66,17 @@ body {
     height: auto;
 }
 
+.dropdown-item {
+    background-color: var(--medGray);
+    font: var(--textFont);
+    color: var(--darkGray);
+}
+
+.instructions {
+    font-size: 12px;
+    color: var(--lightGray);
+}
+
 /* DROP DOWN OPTIONS CARD */
 
 select {
@@ -126,11 +137,11 @@ select {
 /* .model-open{
     width: 480px;
     margin-top: 15px;
-    display:none;
+    display: inline;
 }
 
 .modal {
-    display: none;
+    display: flex;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -189,11 +200,36 @@ select {
 .footer {
     background-color: var(--darkGray);
     color: var(--lightGray);
+    font-size: 10px;
 }
 
 .card-body {
     max-width: 1000px;
     margin: auto;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#rawgTag,
+#bootstrap-link,
+#google-fonts-link {
+    color: white;
+    font-size: 10px;
+    transition: all 0.2s ease-in-out;
+    border-radius: 10px;
+}
+
+#rawgTag:hover,
+#bootstrap-link:hover,
+#google-fonts-link:hover {
+    box-shadow: 0 5px 7px var(--glow);
+    color: var(--glow);
+    font-size: 13px;
 }
 
 @media screen and (max-width: 850px) {
@@ -216,10 +252,19 @@ select {
     }
 }
 
+#rawgTag,
+#bootstrap-link,
+#google-fonts-link {
+    color: white;
+}
+
 @media screen and (max-width:670px) {
     
     nav {
         height: 150px;
+        display: flex;
+        flex-direction: column;
+        
     }
     .navbar {
         display: flex;
@@ -227,11 +272,11 @@ select {
         height: auto;
     }
 
-    #navbarNav {
+    /* #navbarNav { */
         /* display: flex;
         flex-direction: column;
         height: auto; */
         /* display: block; */
         /* margin:auto; */
-    }
+    /* } */
 }

@@ -83,9 +83,64 @@ body {
 .footer {
     background-color: var(--darkGray);
     color: var(--lightGray);
+    font-size: 10px;
+    margin-top: 200px;
 }
 
 .card-body {
     max-width: 1000px;
     margin: auto;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#rawgTag,
+#bootstrap-link,
+#google-fonts-link {
+    color: white;
+    font-size: 10px;
+    transition: all 0.2s ease-in-out;
+    border-radius: 10px;
+}
+
+#rawgTag:hover,
+#bootstrap-link:hover,
+#google-fonts-link:hover {
+    box-shadow: 0 5px 7px var(--glow);
+    color: var(--glow);
+    font-size: 13px;
+}
+
+@media screen and (max-width: 1150px) {
+    /* transition: 200ms ease-in-out; */
+
+    .gameinfo-container {
+        width: 80%;
+    }
+
+    .video-container {
+        width: 90%;
+    }
+
+}
+
+@media screen and (max-width:750px) {
+    
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        font-size: 30px;
+    }
+
+    .footer {
+        font-size: 10px;
+    }
+
+
 }
