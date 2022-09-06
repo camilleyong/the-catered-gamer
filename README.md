@@ -46,7 +46,7 @@ Once the page is loaded, select your desired PLATFORM and GENRE from the drop do
   </tr>
 </table>
 
-
+alt
 ## APIs
 
 <a title="RAWGvideoGamesDatabase" href="https://rawg.io/apidocs">RAWG Video Games Database</a><br /><a title="youTubevids" href="#placeholder">youTube API</a>

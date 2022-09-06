@@ -2,11 +2,12 @@ var platformBtn = $('#platform-drop');
 var genreBtn = $('#genre-drop');
 var submitBtn = $('#submit-btn');
 
-
 //* Our on-click event for the submit button. 
 submitBtn.on('click', function(event){
     event.preventDefault();
 
+    $('.find-game').css('display', 'none');
+    $('.search-results').css('display', 'flex');
 
     //*Here, we get the values that the user selected from each drop down menu
     var platformSelection = $('#platform-drop').val();
