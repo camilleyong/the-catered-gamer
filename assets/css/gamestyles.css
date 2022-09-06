@@ -89,3 +89,7 @@ body {
     max-width: 1000px;
     margin: auto;
 }
+
+#rawgTag {
+    color: white;
+}
