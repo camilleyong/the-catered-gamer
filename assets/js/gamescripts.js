@@ -6,10 +6,10 @@
 console.log("it's linked")
 
 // ?LOCAL STORAGE
+// import(getTrioData)from'./welcome.js'
 
-var game = getattr('#clicked');
 var gameDetails = localStorage.getItem(getTrioData)(JSON.parse());
-
+var game = gameDetails.name
 
 
 
