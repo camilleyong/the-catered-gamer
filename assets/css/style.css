@@ -79,12 +79,6 @@ select {
     background-color: #CF9FFF;
 }
 
-select:selected {
-    background-color: #6c757d;
-    color: white;
-    font-family: var(--textFont);
-}
-
 
 /* --SEARCH RESULTS-- */
 .search-results {
@@ -128,8 +122,8 @@ select:selected {
     flex-wrap: wrap;
 }
 
-/* ---MODAL--- */
-.model-open{
+/* ---MODAL WILL REVISIT IN THE FUTURE--- */
+/* .model-open{
     width: 480px;
     margin-top: 15px;
     display:none;
@@ -178,7 +172,7 @@ select:selected {
     background-color: rgb(0, 0, 0, 0.5);
     pointer-events: none;
     transition: 200ms ease-in-out;
-}
+} */
 
 /* --SEARCH HISTORY-- */
 .search-history {

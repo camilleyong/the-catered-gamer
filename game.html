@@ -32,12 +32,13 @@
         <div class="game-display card mb-3" style="max-width: 1000px; height: 400px;">
             <div class="row no-gutters">
                 <div class="col-md-4">
-                    <img src="..." class="card-img" alt="Video Game Image">
+                    <img id="videoImage" src="..." class="card-img" alt="Video Game Image">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
-                        <p class="card-text description">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text description">This is a wider card with supporting text below as a natural
+                            lead-in to additional content. This content is a little bit longer.</p>
                         <p class="card-text release-date">Last updated 3 mins ago</p>
                     </div>
                 </div>
@@ -48,27 +49,25 @@
     <section class="video-container">
         <div class="game-video card mb-3" style="width: 1000px; height: 600px;">
             <!-- <div class="row no-gutters"> -->
-                <div class="col">
-                    <h5 class="gameplay-title">WATCH GAMEPLAY:</h5> 
+            <div class="col">
+                <h5 class="gameplay-title">WATCH GAMEPLAY:</h5>
+            </div>
+            <div class="col">
+                <div class="video-input">
+                    <iframe src="" id="youTubeVideo" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen width="640" height="480"> </iframe>
+                    <!-- IT SHOULD BE IFRAME NOT VIDEO -->
+                    <!-- <source src="movie.mp4" type="video/mp4">
+                        <source src="movie.ogg" type="video/ogg">
+                        Your browser does not support the video tag.
+                    </video> -->
                 </div>
-                <div class="col">
-                    <div class="video-input">
-                        <video width="640" height="480" controls>
-                            <source src="movie.mp4" type="video/mp4">
-                            <source src="movie.ogg" type="video/ogg">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </div>
+            </div>
             <!-- </div> -->
         </div>
     </section>
 
-    <section>
-        <iframe src="" id="youTubeVideo" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-    </section>
 </body>
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"
@@ -84,11 +83,12 @@
         <div class="card-body">
             <blockquote class="blockquote mb-0">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite>
+                </footer>
             </blockquote>
         </div>
     </div>
-    
+
 </footer>
 
 </html>

@@ -1,33 +1,27 @@
-
 // console.log("it's linked")
 
-console.log("it's linked")
-
-var platformBtn = $('#platformBtn');
-var genreBtn = $('#genreBtn');
-var submitBtn = $('#submit-btn');
-var response = $('#error');
+// var platformBtn = $('#platformBtn');
+// var genreBtn = $('#genreBtn');
+// var submitBtn = $('#submit-btn');
+// var response = $('#error');
 
 
 
-function errorResponse (type, message) {
-    response.text(response);
-};
+// function errorResponse (type, message) {
+//     response.text(response);
+// };
 
-submitBtn.on('click', function(event) {
-    event.preventDefault();
-    console.log(event);
-    platformBtn = localStorage.getItem
-    genreBtn = localStorage.getItem
+// submitBtn.on('click', function(event) {
+//     event.preventDefault();
+//     console.log(event);
 
-    if(!platformBtn === !genreBtn) {
-            errorResponse("Please select a Platform and Genre Option");
-            response.text(errorResponse);
-    } else if (platformBtn === genreBtn) {
 
-    }  localStorage.setItem("platformBtn", JSON.stringify(platformBtn));
-        localStorage.setItem("genreBtn", JSON.stringify(genreBtn));
-    });
+//     if(!platformBtn === !genreBtn) {
+//             errorResponse("Please select a Platform and Genre Option");
+//             response.text(errorResponse);
+//     } else if (platformBtn === genreBtn) {
+//     }
+// });
 
 
 // submitBtn.on('click', function(event) {
@@ -177,6 +171,13 @@ getGames();
 
 // LOCAL STORAGE FOR PLATFORMS, GENRE, AND SAVE BUTTON
 
+// ?LOCAL STORAGE
+
+var game = getattr('#clicked');
+var gameDetails = localStorage.getItem(getTrioData)(JSON.parse());
+
+
+
 
 
 //function for youtube videos
@@ -200,48 +201,7 @@ function getYouTube(game) {
             $(youTubeVideo).attr("src", url)
         });
 }
-getYouTube();
+getYouTube(game);
 
 
-// function for youtube videos
-
-// ? i'll just comment this out because it got duplicated.
-// function getYouTube(game) {
-//     var youTubeVideo = $("#youTubeVideo");
-//     var trailerUrl = "https://cors-anywhere.herokuapp.com/https://serpapi.com/search.json?engine=youtube&search_query=" + game + "&api_key=58f4d32ec9b9734f0935989c9def9f0766c97c4092a3e8b56d00745a828c4eb1";
-
-//     fetch(trailerUrl)
-//         .then(function (response) {
-//             if (response.ok) {
-//                 return response.json();
-//             }
-//         })
-//         .then(function (data) {
-//             console.log(data.video_results);
-//             var url = data.video_results[0].link
-//             url = url.replace("watch?v=", "embed/")
-//             console.log(url);
-//             $(youTubeVideo).attr("src", url)
-//         });
-// }}
-
-
-function getYouTube(game) {
-    var youTubeVideo = $("#youTubeVideo");
-    var trailerUrl = "https://cors-anywhere.herokuapp.com/https://serpapi.com/search.json?engine=youtube&search_query=" + game + "&api_key=58f4d32ec9b9734f0935989c9def9f0766c97c4092a3e8b56d00745a828c4eb1";
-
-    fetch(trailerUrl)
-        .then(function (response) {
-            if (response.ok) {
-                return response.json();
-            }
-        })
-        .then(function (data) {
-            console.log(data.video_results);
-            var url = data.video_results[0].link
-            url = url.replace("watch?v=", "embed/")
-            console.log(url);
-            $(youTubeVideo).attr("src", url)
-        });
-}
 
