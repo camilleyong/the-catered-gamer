@@ -84,6 +84,7 @@ body {
     background-color: var(--darkGray);
     color: var(--lightGray);
     font-size: 10px;
+    margin-top: 200px;
 }
 
 .card-body {

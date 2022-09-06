@@ -262,6 +262,9 @@ select {
     
     nav {
         height: 150px;
+        display: flex;
+        flex-direction: column;
+        
     }
     .navbar {
         display: flex;
