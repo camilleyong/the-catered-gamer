@@ -2,9 +2,7 @@ var miniClick = $('.game-icon')
 var platformBtn = $('#platform-drop');
 var genreBtn = $('#genre-drop');
 var submitBtn = $('#submit-btn');
-var firstGame = $('#firstGame');
-var secondGame = $('#secondGame');
-var thirdGame = $('#thirdGame');
+
 // var response = $('#error');
 
 
@@ -55,12 +53,14 @@ submitBtn.on('click', function (event) {
             console.log(data.results);
             //*we only want three random results from the data.results, so I'm setting up a variable here to hold that for a function called 'selectThree'
             var selectedThree = selectThree(data.results);
+            var count = 1;
             selectedThree.forEach(item => {
                 console.log(item)
                 var gameImage = item.background_image
                 var gameDate = item.released
                 var gameRate = item.rating
-                gameName = item.name
+                var gameName = item.name
+
 
                 console.log(selectedThree)
                 console.log(gameName)
@@ -70,73 +70,47 @@ submitBtn.on('click', function (event) {
                 console.log(selectedThree)
 
 
-                var firstGameImage = gameImage[0]
-                var secondGameImage = gameImage[1]
-                var thirdGameImage = gameImage[2]
-
-                var firstGameName = gameName[0]
-                var secondGameName = gameName[1]
-                var thirdGameName = gameName[2]
-
-                $('game-title1').text(firstGameName)
-
-                $('game-title2').text(secondGameName)
-
-                $('game-title3').text(thirdGameName)
-
-                var firstGameRate = gameRate[0]
-                var secondGameRate = gameRate[1]
-                var thirdGameRate = gameRate[2]
-
-                $('rate1').text(firstGameRate)
-
-                $('rate2').text(secondGameRate)
-
-                $('rate3').text(thirdGameRate)
-
-                var firstGameDate = gameDate[0]
-                console.log(firstGameDate)
-                var secondGameDate = gameDate[1]
-                var thirdGameDate = gameDate[2]
-
-                $('release-date1').text(firstGameDate)
-
-                $('release-date2').text(secondGameDate)
-
-                $('release-date3').text(thirdGameDate)
+                // var firstGameImage = gameImage
 
 
-                $(firstGame).attr("src", firstGameImage)
+                // var firstGameName = gameName
 
-                $(secondGame).attr("src", secondGameImage)
-
-                $(thirdGame).attr("src", thirdGameImage)
+                $('.game-title' + count).text(gameName)
 
 
-                $(firstGame).attr("data-value", firstGameName)
-                $(secondGame).attr("data-value", secondGameName)
-                $(thirdGame).attr("data-value", thirdGameName)
+                // var firstGameRate = gameRate
 
+
+                $('.rate' + count).text(gameRate)
+
+
+                // var firstGameDate = gameDate
+                console.log(gameDate)
+
+
+                $('.release-date' + count).text(gameDate)
+
+                console.log(gameImage)
+                $('#gameImage' + count).attr("src", gameImage)
+
+
+                $('.game-icon' + count).attr("data-value", gameName)
+
+                count++;
+
+
+                miniClick.on("click", function (event) {
+                    event.preventDefault();
+                    console.log($(event.target).parent().data().value)
+                    var imageClicked = $(event.target).parent().data().value
+                    localStorage.setItem('dontDisplay', imageClicked);
+                    location.href = "game.html";
+
+
+                })
             })
+
         })
-
-
-    miniClick.on("click", function (event) {
-        event.preventDefault
-        // ? on click event of the images?
-        var imageClicked = {
-            image: gameImage,
-            name: gameName,
-            date: gameDate,
-            rate: gameRate
-        }
-
-        var getTrioData = localStorage.setItem('.dontDisplay', imageClicked)(JSON.stringify())
-        location.href = "game.html";
-    })
-
-
-
 })
 export { getTrioData }
 var getTrioData
